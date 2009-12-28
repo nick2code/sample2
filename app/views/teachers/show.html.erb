@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @teacher.name %>
+</p>
+
+<p>
+  <b>Dept:</b>
+  <%=h @teacher.dept.name %>
+</p>
+
+<p>
+  <b>Office:</b>
+  <%=h @teacher.office %>
+</p>
+
+<p>
+  <b>Tel:</b>
+  <%=h @teacher.tel %>
+</p>
+
+
+<%= link_to 'Edit', edit_teacher_path(@teacher) %> |
+<%= link_to 'Back', teachers_path %>

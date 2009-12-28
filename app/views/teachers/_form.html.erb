@@ -1,0 +1,23 @@
+<% form_for(@teacher) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :dept_id %><br />
+    <%= f.collection_select(:dept_id, Dept.all, :id, :name, {:prompt => ""}) %>
+  </p>
+  <p>
+    <%= f.label :office %><br />
+    <%= f.text_field :office %>
+  </p>
+  <p>
+    <%= f.label :tel %><br />
+    <%= f.text_field :tel %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

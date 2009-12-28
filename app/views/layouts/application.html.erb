@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>城嬉大學: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+</head>
+<body>
+<%= link_to "科系", depts_path %> |
+<%= link_to "老師", teachers_path %> |
+<%= link_to "學生", students_path %> |
+<%= link_to "課程", courses_path %> |
+
+    <% if current_user %>
+      <%= link_to "Logout", logout_url %>
+    <% else %>
+      <%= link_to "Sign up", new_user_url %>
+      |
+      <%= link_to "Sign in", login_url %>
+    <% end %>
+
+<hr>
+▼ 一 ▼
+  <p style="color: green"><%= flash[:notice] %></p>
+  <%= yield %>
+▲ 一 ▲
+<hr>
+▼ 二 ▼
+  <% flash.each do |key, msg| %>
+    <%= content_tag :div, msg, :class => key %>
+  <% end %>
+  <%= yield :layout %>
+▲ 二 ▲
+<hr>
+
+</body>
+</html>
