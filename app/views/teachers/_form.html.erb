@@ -21,3 +21,15 @@
     <%= f.submit %>
   </p>
 <% end %>
+<hr>
+  <% semantic_form_for @teacher do |form| %>
+    <%= form.error_messages %>
+    <% form.inputs do %>
+      <%= form.input :name, :label => 'Name' %>
+      <%= form.input :office, :label => 'Office' %>
+      <%= form.input :tel, :label => 'Tel' %>
+
+      <%= form.input :dept %>
+    <% end %>
+    <%= form.buttons %>
+  <% end %>

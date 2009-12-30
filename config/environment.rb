@@ -24,10 +24,10 @@ Rails::Initializer.run do |config|
   config.gem 'searchlogic'    # http://github.com/binarylogic/searchlogic/
   config.gem 'friendly_id'    # http://rdoc.info/projects/norman/friendly_id
   config.gem "authlogic"      # http://github.com/binarylogic/authlogic/
-# config.gem 'paperclip'
-# config.gem 'facebooker'
+# config.gem 'paperclip'      # 搞不定 ImageMagick
+# config.gem 'facebooker'     # 搞不定
 # config.gem 'annotate'
-# config.gem 'formtastic'
+  config.gem 'formtastic'     # http://github.com/justinfrench/formtastic/
 # config.gem 'RedCloth', :lib => 'redcloth'
 # config.gem "acts-as-taggable-on"
 # config.gem 'ajaxful_rating'
