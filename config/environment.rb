@@ -20,15 +20,15 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
 
-  config.gem 'will_paginate'  # http://github.com/mislav/will_paginate/
-  config.gem 'searchlogic'    # http://github.com/binarylogic/searchlogic/
-  config.gem 'friendly_id'    # http://rdoc.info/projects/norman/friendly_id
-  config.gem "authlogic"      # http://github.com/binarylogic/authlogic/
-# config.gem 'paperclip'      # 搞不定 ImageMagick
-# config.gem 'facebooker'     # 搞不定
+  config.gem 'will_paginate'                # http://github.com/mislav/will_paginate/
+  config.gem 'searchlogic'                  # http://github.com/binarylogic/searchlogic/
+  config.gem 'friendly_id'                  # http://rdoc.info/projects/norman/friendly_id
+  config.gem "authlogic"                    # http://github.com/binarylogic/authlogic/
+# config.gem 'paperclip'                    # 搞不定 ImageMagick
+# config.gem 'facebooker'                   # 搞不定
 # config.gem 'annotate'
-  config.gem 'formtastic'     # http://github.com/justinfrench/formtastic/
-# config.gem 'RedCloth', :lib => 'redcloth'
+  config.gem 'formtastic'                   # http://github.com/justinfrench/formtastic/
+  config.gem 'RedCloth', :lib => 'redcloth' # http://redcloth.org/
 # config.gem "acts-as-taggable-on"
 # config.gem 'ajaxful_rating'
 
