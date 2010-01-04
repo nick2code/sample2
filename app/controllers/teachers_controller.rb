@@ -1,4 +1,7 @@
 class TeachersController < ApplicationController
+  
+  before_filter :populate, :only => [:new, :edit, :create]
+  
   # GET /teachers
   # GET /teachers.xml
   def index
@@ -71,5 +74,9 @@ class TeachersController < ApplicationController
       format.html { redirect_to(teachers_url) }
       format.xml  { head :ok }
     end
+  end
+  
+  def populate
+     @depts = Dept.all
   end
 end

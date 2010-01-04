@@ -9,7 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091230084404) do
+ActiveRecord::Schema.define(:version => 20100104071017) do
+
+  create_table "course_takings", :force => true do |t|
+    t.integer  "student_id"
+    t.integer  "course_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "courses", :force => true do |t|
     t.string   "name"
@@ -36,24 +43,6 @@ ActiveRecord::Schema.define(:version => 20091230084404) do
   add_index "slugs", ["name", "sluggable_type", "scope", "sequence"], :name => "index_slugs_on_n_s_s_and_s", :unique => true
   add_index "slugs", ["sluggable_id"], :name => "index_slugs_on_sluggable_id"
 
-  create_table "students", :force => true do |t|
-    t.string   "name"
-    t.string   "sex"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "dept_id"
-  end
-
-  create_table "teachers", :force => true do |t|
-    t.string   "name"
-    t.integer  "dept_id"
-    t.string   "office"
-    t.string   "tel"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "users", :force => true do |t|
     t.string   "login",                              :null => false
     t.string   "crypted_password",                   :null => false
@@ -70,6 +59,11 @@ ActiveRecord::Schema.define(:version => 20091230084404) do
     t.string   "last_login_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "type"
+    t.integer  "dept_id"
+    t.string   "name"
+    t.string   "sex"
+    t.string   "email"
   end
 
 end

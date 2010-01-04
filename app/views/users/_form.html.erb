@@ -6,3 +6,15 @@
 <br />
 <%= form.label :password_confirmation %><br />
 <%= form.password_field :password_confirmation %><br />
+
+<%= form.label :type %><br />
+<%= form.select :type, [["",""], ["student", "Student"], ["teacher", "Teacher"]] %><br />
+
+<%= form.label :name %><br />
+<%= form.text_field :name %><br />
+
+<%= form.label :sex %><br />
+<%= form.select :sex, [["",""], ["男", "M"], ["女", "F"]] %><br />
+
+<%= form.label :dept_id %><br />
+<%= form.collection_select(:dept_id, @depts, :id, :name, {:include_blank => true}) %><br />

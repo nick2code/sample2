@@ -1,0 +1,20 @@
+<h1>Listing depts</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @depts.each do |dept| %>
+  <tr>
+    <td><%=h dept.name %></td>
+    <td><%= link_to 'Show', admin_dept_path(dept) %></td>
+    <td><%= link_to 'Edit', edit_admin_dept_path(dept) %></td>
+    <td><%= link_to 'Destroy', admin_dept_path(dept), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New dept', new_admin_dept_path %>

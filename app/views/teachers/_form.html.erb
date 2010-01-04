@@ -7,7 +7,7 @@
   </p>
   <p>
     <%= f.label :dept_id %><br />
-    <%= f.collection_select(:dept_id, Dept.all, :id, :name, {:prompt => ""}) %>
+    <%= f.collection_select(:dept_id, @depts, :id, :name, {:prompt => ""}) %>
   </p>
   <p>
     <%= f.label :office %><br />

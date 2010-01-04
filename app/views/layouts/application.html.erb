@@ -11,7 +11,7 @@
   <%= stylesheet_link_tag "formtastic_changes" %>
 </head>
 <body>
-<%= link_to "科系", depts_path %> |
+<%= link_to "科系", admin_depts_path %> |
 <%= link_to "老師", teachers_path %> |
 <%= link_to "學生", students_path %> |
 <%= link_to "課程", courses_path %> |
@@ -23,13 +23,14 @@
       |
       <%= link_to "Sign in", login_url %>
     <% end %>
-<!--
+
 <hr>
+
 ▼ 一 ▼
   <p style="color: green"><%= flash[:notice] %></p>
   <%= yield %>
 ▲ 一 ▲
--->
+
 <hr>
 ▼ 二 ▼
 <p style="color: green">
